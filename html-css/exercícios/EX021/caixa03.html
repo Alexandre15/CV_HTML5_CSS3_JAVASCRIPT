@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda personalizada</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            border: 20px solid black;
+            padding: 10px;
+            
+            border-image: url('BOLINHAS.png.webp');
+            border-image-slice: 130;
+            border-image-repeat: repeat;
+            /*
+            Shorthand:
+                border-image: url('BOLINHAS.png.webp') 27 repeat;
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Borda</h1>
+</body>
+</html>
