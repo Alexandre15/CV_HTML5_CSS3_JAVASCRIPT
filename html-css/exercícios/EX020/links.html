@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*
+            #  = id
+            .  = class
+            :  = pseudo-class
+            :: = pseudo-element
+            >  = children
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: darkgreen;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        .especial {
+            background-color: darkred;
+        }
+
+        .especial::before {
+            content: '⇒ ';
+        }
+        .especial::after {
+            content: ' ⇐';
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/Alexandre15" target="_blank" class="especial">Repositório GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/alexandre-fagundes-74343b1a3/" target="_blank">Linkedin</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100010779333447" target="_blank">Facebook</a></li>
+    </ul>
+</body>
+</html>
