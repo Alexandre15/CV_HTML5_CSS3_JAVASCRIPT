@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'ANDROID';
+    src: url(../d010/pacote-projeto-d010/fontes/idroid.otf) format('opentypt');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    background-image: linear-gradient(180deg, #008648, green);
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+section#menu > a {
+    text-shadow: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    margin: 0px 50px 20px 50px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
+}
+p {
+    padding: 20px;
+}
+
+div {
+    text-align: center;
+}
+div#video {
+    background-color: #008648;
+    padding: 20px;
+    margin: 0px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 20px;
+}
+h2{
+    padding: 20px;
+}
+
+footer {
+    background-color: #008648;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
