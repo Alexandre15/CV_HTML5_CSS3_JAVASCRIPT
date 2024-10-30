@@ -33,6 +33,20 @@ section#menu > a {
 section#menu {
     text-indent: 20px;
 }
+h3 {
+    text-align: left;
+    padding: 15px;
+    font-size: 1em;
+    background-color: rgb(15, 207, 127);
+    margin: 0%;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+}
+section#extra {
+    background-color: #85ffb4;
+    border-radius: 10px;
+    margin: 20px;
+}
 
 body {
     margin: 0px;
@@ -94,6 +108,19 @@ h2{
     color: #00430f;
     margin: 10px;
     padding: 0%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.lista {
+    list-style-type: none;
+    padding: 0%;
+    margin: 20px 150px 20px 40px;
+}
+li {
+    text-align: left;
 }
 
 footer {
