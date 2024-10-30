@@ -61,6 +61,13 @@ span {
     color: #00430f;
     font-weight: bold;
 }
+span > a {
+    text-decoration: none;
+    color: #00430f;
+}
+span#link::after {
+    content: url(pacote-projeto-d010/imagens/attachmentvector.png);
+}
 p {
     padding: 0px 20px;
     margin: 0px;
@@ -73,8 +80,8 @@ div {
 }
 div#video {
     background-color: #008648;
-    padding: 20px;
-    margin: 0px;
+    padding: 20px 40px;
+    margin: 20px 0px;
 }
 
 h1 {
