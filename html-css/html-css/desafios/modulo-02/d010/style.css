@@ -124,10 +124,18 @@ h2{
 .lista {
     list-style-type: none;
     padding: 0%;
-    margin: 20px 150px 20px 40px;
+    margin: 20px 140px 20px 40px;
 }
 li {
     text-align: left;
+}
+li::before {
+    content: url(pacote-projeto-d010/imagens/certo.png);
+}
+li > span {
+    text-decoration: underline;
+    color: black;
+    font-weight: normal;
 }
 
 footer {
