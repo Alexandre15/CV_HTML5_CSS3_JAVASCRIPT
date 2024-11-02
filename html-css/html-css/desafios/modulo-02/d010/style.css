@@ -7,6 +7,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "colvetica";
+    src: url(../d010/pacote-projeto-d010/fontes/coolveticacompressedhv.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 header {
     background-image: linear-gradient(180deg, #00d774, #00430f);
     margin: 0px;
@@ -17,8 +24,10 @@ header {
 
 header > h1 {
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
+    font-family: "colvetica";
 }
+
 header > p {
     text-align: center;
     font-size: 1.2em;
@@ -31,14 +40,17 @@ section#menu > a {
     color: white;
     padding: 5px;
 }
+
 section#menu > a:hover {
     background-color: rgb(0, 114, 66);
     border-radius: 5px 5px 0px 0px;
 }
+
 section#menu {
     text-indent: 20px;
     padding: 10px 0px 5px 0px;
 }
+
 h3 {
     text-align: left;
     padding: 15px;
@@ -48,11 +60,17 @@ h3 {
     border-radius: 10px 10px 0px 0px;
     color: white;
 }
+
 section#extra {
     background-color: #85ffb4;
     border-radius: 10px;
     margin: 20px;
     box-shadow: 2px 2px 7px 0px #00000069;
+    height: 370px;
+}
+
+section#extra > p {
+    margin-top: 10px;
 }
 
 body {
@@ -69,8 +87,10 @@ main {
     text-align: center;
     background-color: white;
 }
+
 .android {
     font-family: 'android';
+    color: #00430f;
 }
 
 picture > img {
@@ -78,17 +98,21 @@ picture > img {
     margin: 15px 0px;
 
 }
+
 span {
     color: #00430f;
     font-weight: bold;
 }
+
 span > a {
     text-decoration: none;
     color: #00430f;
 }
+
 span#link::after {
     content: url(pacote-projeto-d010/imagens/attachmentvector.png);
 }
+
 p {
     padding: 0px 20px;
     margin: 0px;
@@ -96,9 +120,14 @@ p {
     text-align: justify;
 }
 
+p#foter {
+    padding-bottom: 20px;
+}
+
 div {
     text-align: center;
 }
+
 div#video {
     background-color: #008648;
     padding: 20px 40px;
@@ -109,6 +138,7 @@ h1 {
     margin: 0px;
     padding: 20px;
 }
+
 h2{
     background-image: linear-gradient(90deg, rgb(79, 255, 173), rgba(24, 252, 165, 0));
     text-align: left;
@@ -121,17 +151,21 @@ h2{
     display: flex;
     justify-content: space-between;
 }
+
 .lista {
     list-style-type: none;
     padding: 0%;
     margin: 20px 140px 20px 40px;
 }
+
 li {
     text-align: left;
 }
+
 li::before {
     content: url(pacote-projeto-d010/imagens/certo.png);
 }
+
 li > span {
     text-decoration: underline;
     color: black;
