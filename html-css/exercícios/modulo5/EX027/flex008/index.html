@@ -10,6 +10,8 @@
             background-color: lightsalmon;
             display: flex;
             flex-flow: row wrap;
+            align-items: stretch;
+            height: 400px;
         }
 
         div.item {
@@ -19,32 +21,28 @@
             padding: 20px;
         }
 
-        #i1 {
-            order: 0;
-        }
+        #i1 {}
 
         #i2 {
-            order: -2;
+            align-self: auto;
         }
 
         #i3 {
-            order: 4;
+            align-self: flex-end;
         }
 
-        #i4 {
-            order: 8;
-        }
+        #i4 {}
 
         #i5 {
-            order: 2;
+            align-self: center;
         }
 
         #i6 {
-            order: 0;
+            align-self: flex-start;
         }
 
         #i7 {
-            order: -4;
+            align-self: stretch;
         }
     </style>
 </head>
