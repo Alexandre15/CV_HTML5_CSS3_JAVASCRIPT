@@ -22,6 +22,7 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 header > h1 {
@@ -55,17 +56,25 @@ header > nav > a:hover {
 }
 
 main {
-    background-color: white;
+    background-color: rgba(211, 211, 211, 0);
     margin: 10px;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.308);
+    /*border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.308);*/
 }
 
-main:hover {
+.content:hover {
     box-shadow: 4px 20px 26px rgba(0, 0, 0, 0.308);
     margin-top: 5px;
     transition: box-shadow 0.3s;
     transition: margin-top 0.3s;
 }
 
+.content {
+    background-color: rgba(128, 128, 128, 0.473);
+    max-width: 1000px;
+    margin: 10px auto;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.308);
+    border-radius: 10px;
+    padding: 10px;
+}
