@@ -12,40 +12,46 @@
             flex-flow: row nowrap;
         }
 
-        div.item1 {
+        div.item {
             background-color: lightskyblue;
             border: 1px solid black;
             text-align: center;
-            flex-basis: 350px;
-            flex-shrink: 4;
-            flex-grow: 0;
         }
 
-        div.item2 {
-            background-color: lightskyblue;
-            border: 1px solid black;
-            text-align: center;
-            flex-basis: 350px;
+        #cxA {
+            /*
             flex-shrink: 0;
-            flex-grow: 2;
+            flex-grow: 1;
+            flex-basis: 200px;
+            */
+            flex: 1 0 200px;
         }
 
-        div.item3 {
-            background-color: lightskyblue;
-            border: 1px solid black;
-            text-align: center;
-            flex-basis: 350px;
+        #cxB {
+            /*
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px;
+            */
+            flex: 1 1 150px;
+        }
+
+        #cxC {
+            /*
             flex-shrink: 8;
             flex-grow: 1;
+            flex-basis: auto;
+            */
+            flex: 1 8 auto;
         }
     </style>
 </head>
 
 <body>
     <div class="conteiner">
-        <div class="item1">Bloco A</div>
-        <div class="item2">Bloco B</div>
-        <div class="item3">Bloco C</div>
+        <div class="item" id="cxA">Bloco A</div>
+        <div class="item" id="cxB">Bloco B</div>
+        <div class="item" id="cxC">Bloco C</div>
     </div>
 </body>
 
