@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background: #111;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 800px;
+            /* Profundidade */
+        }
+
+        .scene {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateCube 10s infinite linear;
+        }
+
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.9;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .front {
+            background: #e74c3c;
+            transform: translateZ(100px);
+        }
+
+        .back {
+            background: #3498db;
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .right {
+            background: #2ecc71;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .left {
+            background: #f1c40f;
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .top {
+            background: #9b59b6;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            background: #1abc9c;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        @keyframes rotateCube {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scene">
+        <div class="face front">Frente</div>
+        <div class="face back">Trás</div>
+        <div class="face right">Direita</div>
+        <div class="face left">Esquerda</div>
+        <div class="face top">Topo</div>
+        <div class="face bottom">Base</div>
+    </div>
+</body>
+
+</html>

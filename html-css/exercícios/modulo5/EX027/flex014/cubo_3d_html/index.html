@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cubo 3D com OrbitControls</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #fff; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <!-- OrbitControls -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.min.js"></script>
+
+  <script>
+    // Cena e câmera
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xffffff); // fundo branco
+
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.set(3, 3, 5);
+    camera.lookAt(0, 0, 0);
+
+    // Renderizador
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true;
+    document.body.appendChild(renderer.domElement);
+
+    // Controles da câmera
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+
+    // Cubo roxo
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshStandardMaterial({ color: 0x800080 });
+    const cube = new THREE.Mesh(geometry, material);
+    cube.castShadow = true;
+    cube.position.y = 0.5;
+    scene.add(cube);
+
+    // Chão branco com sombra
+    const planeGeometry = new THREE.PlaneGeometry(10, 10);
+    const planeMaterial = new THREE.ShadowMaterial({ opacity: 0.2 });
+    const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    plane.rotation.x = -Math.PI / 2;
+    plane.receiveShadow = true;
+    scene.add(plane);
+
+    // Luz ambiente fraca
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+    scene.add(ambientLight);
+
+    // Luz direcional
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(4, 10, 4);
+    light.castShadow = true;
+    light.shadow.mapSize.width = 1024;
+    light.shadow.mapSize.height = 1024;
+    light.shadow.camera.near = 1;
+    light.shadow.camera.far = 20;
+    light.shadow.camera.left = -5;
+    light.shadow.camera.right = 5;
+    light.shadow.camera.top = 5;
+    light.shadow.camera.bottom = -5;
+    scene.add(light);
+
+    // Loop de renderização
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
